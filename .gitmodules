@@ -10,3 +10,6 @@
 [submodule "angular.js"]
 	path = angular.js
 	url = git://github.com/angular/angular.js.git
+[submodule "CodeMirror"]
+	path = CodeMirror
+	url = git://github.com/marijnh/CodeMirror.git
