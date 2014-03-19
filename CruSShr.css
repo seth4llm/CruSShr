@@ -3,7 +3,7 @@ body {
 	background: #333;
 	color: #555;
 /*	font: 10pt Arial, Helvetica, sans-serif;*/
-	margin-top: 30px;
+	padding-bottom: 50px;
 }
 textarea {
 	background: #ccc;
@@ -30,7 +30,7 @@ textarea {
 */
 .textbox {
 	height: 32%;
-	margin: .5em 2em;
+	/*margin: .5em 2em;*/
 	padding: 1.5em 0 0;
 	width: auto;
 }

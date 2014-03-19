@@ -1,10 +1,5 @@
+
 /*
-
-$n[]="  ";$r[]=" ";$n[]="\n\n";$r[]="\n";$n[]="  ";$r[]=" ";$n[]="\t";$r[]="";$n[]=": ";$r[]=":";$n[]=", ";$r[]=",";
-$n[]="; ";$r[]=";";$n[]=" {";$r[]="{";$n[]="{ ";$r[]="{";
-$rp[]="`\n\n+`";$rr[]="\n";$rp[]="`\n?(\w+.*;)\n`";$rr[]="$1";$rp[]="`(\{)\n`";$rr[]="$1";
-
-*/
 var usp = { pref: 'auto' }, io = { }, ehl = 'blur change keyup', cb, pt, upr, buf;
 
 var nf = function( n ) {
@@ -117,4 +112,32 @@ var runtime = function() {
 	up();
 };
 
-$( runtime );
+*/
+
+/* AngularJS section */
+var CruSShr = function ( $scope ) {
+	$scope.UnCruSShd = { content: '', len: 0 };
+	$scope.CruSShd = { content: '', len: 0, lps: 0 };
+	$scope.CruSSh_it = function ( ) {
+		var start = new Date();
+		var unprocessed = $scope.UnCruSShd.content;
+		$scope.CruSShd.content = unprocessed.replace( /\/\*[^\*]+?\*\//g, '' )
+			.replace( /(\ {2,})/g, ' ' )
+			.replace( /([\n\r]{2,})/g, '\n' )
+			.replace( /\s?([;:\.\{\},])\s?/g, '$1' )
+			.replace( /([^0-9])0(\.\d+)/g, '$1$2' )
+			.replace( /(#(\d)\2(\d)\3(\d)\4)/g, '#$2$3$4' )
+			.replace( /\t/g, '' )
+			.replace( /\;\}/g, '}' );
+		var end = new Date();
+		$scope.CruSShd.len = $scope.CruSShd.content.length;
+		$scope.CruSShd.lps = end - start;
+	};
+};
+
+
+
+
+
+
+// $( runtime );
