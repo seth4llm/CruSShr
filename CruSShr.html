@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CruSShr &#9660; Stylesheet Crusher</title>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="CruSShr.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.min.css">
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/theme/ambiance.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/mode/css/css.min.js"></script>
+		<script src="CruSShr.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">CruSShr</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="#">Automatic</a></li>
+						<li class="active"><a href="#">Live</a></li>
+						<li><a href="#">Manual</a></li>
+						<li class="divider-vertical"></li>
+						<li class="pull-right"><a href="#" id="update-manual-push">Crush!</a></li>
+						<li class="pull-right"><a href="#" id="proc"></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="textbox">
+				<div class="txb-label txb-label-right" id="length-in">0</div>
+				<div class="txb-label">Input</div>
+				<section id="css-container" class="editor page">
+					<pre id="txinput" spellcheck="false" class="language-css" contenteditable></pre>
+				</section>
+			</div>
+			<div class="textbox">
+				<div class="txb-label txb-label-right" id="length-out">0</div>
+				<div class="txb-label">Output</div>
+				<section id="css-container" class="editor page">
+					<pre id="txoutput" spellcheck="false" class="language-css"></pre>
+				</section>
+			</div>
+
+		</div>
+	
+	</body>
+</html>
