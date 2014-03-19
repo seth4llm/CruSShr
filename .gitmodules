@@ -4,3 +4,9 @@
 [submodule "bootstrap"]
 	path = bootstrap
 	url = git://github.com/twbs/bootstrap.git
+[submodule "jquery"]
+	path = jquery
+	url = git://github.com/jquery/jquery.git
+[submodule "angular.js"]
+	path = angular.js
+	url = git://github.com/angular/angular.js.git
