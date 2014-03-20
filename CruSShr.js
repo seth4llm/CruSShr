@@ -121,7 +121,7 @@ var CruSShr = function ( $scope ) {
 	$scope.CruSSh_it = function ( ) {
 		var start = new Date();
 		var unprocessed = $scope.UnCruSShd.content;
-		$scope.CruSShd.content = unprocessed.replace( /\/\*[^\*]+?\*\//g, '' )
+		$scope.CruSShd.content = unprocessed.replace( /\/\*[^\*]+?\*\//gm, '' )
 			.replace( /(\ {2,})/g, ' ' )
 			.replace( /([\n\r]{2,})/g, '\n' )
 			.replace( /\s?([;:\.\{\},])\s?/g, '$1' )

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html ng-app>
+<html class="height-box" ng-app>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<title>CruSShr &#9660; Stylesheet Crusher</title>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css">
@@ -16,7 +15,7 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/mode/css/css.min.js"></script>
 		<script src="CruSShr.js"></script>
 	</head>
-	<body ng-controller="CruSShr">
+	<body class="body-noise height-box" ng-controller="CruSShr">
 		<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -35,29 +34,27 @@
 				</div>
 			</div>
 		</nav>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-6">
+		<div class="container-fluid height-box">
+			<div class="row height-box">
+				<div class="col-md-6 height-box">
 					<div class="textbox">
 						<div class="txb-label txb-label-right" id="length-in">{{ UnCruSShd.content.length }}</div>
 						<div class="txb-label">Input</div>
-						<section id="css-container" class="editor page">
-							<pre id="txinput" spellcheck="false" class="language-css" contenteditable ng-model="UnCruSShd.data" ng-change="CruSSh_it()"></pre>
+						<section id="css-container" class="editor page height-box">
+							<textarea id="txinput" spellcheck="false" class="language-css noise" contenteditable ng-model="UnCruSShd.content" ng-change="CruSSh_it()"></textarea>
 						</section>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 height-box">
 					<div class="textbox">
 						<div class="txb-label txb-label-right" id="length-out">{{ CruSShd.len }}</div>
 						<div class="txb-label">Output</div>
-						<section id="css-container" class="editor page">
-							<pre id="txoutput" spellcheck="false" class="language-css">{{ CruSShd.content }}</pre>
+						<section id="css-container" class="editor page height-box">
+							<textarea id="txoutput" spellcheck="false" class="language-css" ng-readonly="true">{{ CruSShd.content }}</textarea>
 						</section>
 					</div>
 				</div>
 			</div>
-
 		</div>
-	
 	</body>
 </html>

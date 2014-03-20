@@ -5,6 +5,7 @@ body {
 /*	font: 10pt Arial, Helvetica, sans-serif;*/
 	padding-bottom: 50px;
 }
+.height-box { height: 100%; }
 textarea {
 	background: #ccc;
 	color: #333;
@@ -29,15 +30,17 @@ textarea {
 #update { top: 0; }
 */
 .textbox {
-	height: 32%;
-	/*margin: .5em 2em;*/
+	height: 100%;
+	margin: .5em 2em;
 	padding: 1.5em 0 0;
 	width: auto;
 }
 .textbox div { margin: 0 1ex; }
 .textbox textarea {
 	border: 1px solid #555;
-	height: 100%;
+	height: 90%;
+	max-height: 600px;
+	min-height: 100px;
 	width: 100%;
 }
 .textbox .txb-label {
@@ -47,3 +50,49 @@ textarea {
 .textbox .txb-label-right {
 	float: right;
 }
+
+#txinput, #txoutput {
+	background-color: hsla( 0, 0%, 90%, .8 );
+	border-radius: 6px;
+	box-shadow:
+		inset 0 1px 2px -1px #000,
+		inset 1px 3px 6px rgba( 0, 0, 0, .3 ),
+		0 -1px 2px -1px #fff;
+	padding: 8px;
+}
+
+/*
+
+CSS Noise Code Snippet by James Brocklehurst.
+Find out more at http://www.mightymeta.co.uk/1269/css-noise/
+
+Instructions:
+
+1. Add the snippet to the bottom of your main stylesheet.
+
+2. Add class="noise" to HTML elements to apply noise, use class="body-noise" for body element only.
+
+3. Use grouped selectors instead if you want to avoid unsemantic class attributes.
+
+*/
+
+/*** SNIPPET STARTS ***/
+
+.noise {
+	position: relative;
+	z-index: 1;
+}
+		
+.noise:before, .body-noise:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	opacity: .03;
+	background-image: url(noiseLab.png);
+}
+
+/*** SNIPPET ENDS ***/
