@@ -31,16 +31,29 @@ textarea {
 */
 .textbox {
 	height: 100%;
-	margin: .5em 2em;
+	margin: .5em 1em;
 	padding: 1.5em 0 0;
 	width: auto;
 }
 .textbox div { margin: 0 1ex; }
-.textbox textarea {
+.textbox .editor {
+	background-color: hsla( 0, 0%, 90%, .8 );
 	border: 1px solid #555;
+	border-radius: 6px;
+	box-shadow:
+		inset 0 1px 2px -1px #000,
+		inset 1px 3px 6px rgba( 0, 0, 0, .3 ),
+		0 -1px 2px -1px #fff;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	height: 90%;
-	max-height: 600px;
-	min-height: 100px;
+	padding: 8px;
+	width: 100%;
+}
+.textbox textarea {
+	background: transparent;
+	border: none;
+	height: 100%;
 	width: 100%;
 }
 .textbox .txb-label {
@@ -51,15 +64,6 @@ textarea {
 	float: right;
 }
 
-#txinput, #txoutput {
-	background-color: hsla( 0, 0%, 90%, .8 );
-	border-radius: 6px;
-	box-shadow:
-		inset 0 1px 2px -1px #000,
-		inset 1px 3px 6px rgba( 0, 0, 0, .3 ),
-		0 -1px 2px -1px #fff;
-	padding: 8px;
-}
 
 /*
 

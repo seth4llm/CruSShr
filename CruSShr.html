@@ -30,7 +30,7 @@
 						<li class="pull-right"><a href="#" id="update-manual-push">Crush!</a></li>
 						<li class="pull-right"><a href="#" id="proc"></a></li>
 					</ul>
-					<p class="navbar-text navbar-right">{{ UnCruSShd.content.length + ' &#8725; ' + CruSShd.content.length + ' in ' + CruSShd.lps + ' ms' }}</p>
+					<p class="navbar-text navbar-right">{{ UnCruSShd.len + ' &#8725; ' + CruSShd.len + ' in ' + CruSShd.lps + ' ms' }}</p>
 				</div>
 			</div>
 		</nav>
@@ -38,7 +38,7 @@
 			<div class="row height-box">
 				<div class="col-md-6 height-box">
 					<div class="textbox">
-						<div class="txb-label txb-label-right" id="length-in">{{ UnCruSShd.content.length }}</div>
+						<div class="txb-label txb-label-right" id="length-in">{{ UnCruSShd.len }}</div>
 						<div class="txb-label">Input</div>
 						<section id="css-container" class="editor page height-box">
 							<textarea id="txinput" spellcheck="false" class="language-css noise" contenteditable ng-model="UnCruSShd.content" ng-change="CruSSh_it()"></textarea>
