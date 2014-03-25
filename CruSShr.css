@@ -50,7 +50,7 @@ textarea {
 	padding: 8px;
 	width: 100%;
 }
-.textbox textarea {
+.textbox pre {
 	background: transparent;
 	border: none;
 	height: 100%;
@@ -58,10 +58,16 @@ textarea {
 }
 .textbox .txb-label {
 	color: #999;
+	font-size: 1.28em;
+	font-variant: small-caps;
+	letter-spacing: 1.25px;
 	text-shadow: .5px 1px 4px rgba( 0, 0, 0, .8 );
 }
 .textbox .txb-label-right {
 	float: right;
+	font-size: inherit;
+	font-variant: inherit;
+	letter-spacing: inherit;
 }
 
 
@@ -86,7 +92,7 @@ Instructions:
 	position: relative;
 	z-index: 1;
 }
-		
+
 .noise:before, .body-noise:before {
 	content: "";
 	position: absolute;
@@ -95,8 +101,8 @@ Instructions:
 	bottom:0;
 	left:0;
 	right:0;
-	opacity: .03;
-	background-image: url(noiseLab.png);
+	opacity: .05;
+	background-image: url(noise-8.png);
 }
 
 /*** SNIPPET ENDS ***/
