@@ -37,7 +37,8 @@
 				<div class="col-md-6 height-box">
 					<div class="textbox">
 						<section id="css-container" class="editor page height-box">
-							<pre id="txinput" spellcheck="false" class="language-css noise" contenteditable><code ng-model="UnCruSShd.content" ng-change="CruSSh_it()"></code></textarea>
+							<textarea spellcheck="false" class="hiddenInput" ng-model="UnCruSShd.content" ng-change="CruSSh_it()"></textarea>
+							<pre><code class="language-css">{{ UnCruSShd.content }}</code></pre>
 						</section>
 						<div class="txb-label txb-label-right" id="length-in">{{ UnCruSShd.len }}</div>
 						<div class="txb-label">Input</div>
@@ -46,7 +47,7 @@
 				<div class="col-md-6 height-box">
 					<div class="textbox">
 						<section id="css-container" class="editor page height-box">
-							<pre id="txoutput" spellcheck="false" class="language-css" ng-readonly="true"><code>{{ CruSShd.content }}</code></textarea>
+							<pre><code class="language-css">{{ CruSShd.content }}</code></pre>
 						</section>
 						<div class="txb-label txb-label-right" id="length-out">{{ CruSShd.len }}</div>
 						<div class="txb-label">Output</div>

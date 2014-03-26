@@ -45,6 +45,7 @@ var CruSShr = function ( $scope ) {
 		var end = new Date();
 		$scope.CruSShd.len = ByteSize ( $scope.CruSShd.content.length );
 		$scope.CruSShd.lps = end - start;
+		Prism.highlightAll();
 	};
 };
 

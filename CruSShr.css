@@ -33,6 +33,7 @@ textarea {
 	height: 100%;
 	margin: .5em 1em;
 	padding: 1.5em 0 0;
+	position: relative;
 	width: auto;
 }
 .textbox div { margin: 0 1ex; }
@@ -50,11 +51,17 @@ textarea {
 	padding: 8px;
 	width: 100%;
 }
-.textbox pre {
-	background: transparent;
+.textbox textarea, .textbox pre {
+	/*background: transparent;*/
 	border: none;
 	height: 100%;
 	width: 100%;
+}
+.hiddenInput {
+	margin-bottom: -100%;
+	position: relative;
+	opacity: .5;
+	z-index: 2;
 }
 .textbox .txb-label {
 	color: #999;
