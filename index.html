@@ -5,14 +5,12 @@
 		<title>CruSShr &#9660; Stylesheet Crusher</title>
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="prism.css">
 		<link rel="stylesheet" href="CruSShr.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.min.css">
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/theme/ambiance.min.css">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/codemirror.min.js"></script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/codemirror/3.22.0/mode/css/css.min.js"></script>
+		<script src="prism.js"></script>
 		<script src="CruSShr.js"></script>
 	</head>
 	<body class="body-noise height-box" ng-controller="CruSShr">
@@ -38,20 +36,21 @@
 			<div class="row height-box">
 				<div class="col-md-6 height-box">
 					<div class="textbox">
+						<section id="css-container" class="editor page height-box">
+							<textarea spellcheck="false" class="hiddenInput" ng-model="UnCruSShd.content" ng-change="CruSSh_it()"></textarea>
+							<pre><code class="language-css">{{ UnCruSShd.content }}</code></pre>
+						</section>
 						<div class="txb-label txb-label-right" id="length-in">{{ UnCruSShd.len }}</div>
 						<div class="txb-label">Input</div>
-						<section id="css-container" class="editor page height-box">
-							<textarea id="txinput" spellcheck="false" class="language-css noise" contenteditable ng-model="UnCruSShd.content" ng-change="CruSSh_it()"></textarea>
-						</section>
 					</div>
 				</div>
 				<div class="col-md-6 height-box">
 					<div class="textbox">
+						<section id="css-container" class="editor page height-box">
+							<pre><code class="language-css">{{ CruSShd.content }}</code></pre>
+						</section>
 						<div class="txb-label txb-label-right" id="length-out">{{ CruSShd.len }}</div>
 						<div class="txb-label">Output</div>
-						<section id="css-container" class="editor page height-box">
-							<textarea id="txoutput" spellcheck="false" class="language-css" ng-readonly="true">{{ CruSShd.content }}</textarea>
-						</section>
 					</div>
 				</div>
 			</div>
